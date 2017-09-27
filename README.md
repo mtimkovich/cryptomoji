@@ -9,6 +9,8 @@
 Cryptomoji encrypts alphabetical messages into emoji using an emoji passphrase, and can decrypt the message when given
 the correct passphrase.
 
+### Encrypt
+
 ```
 cryptomoji.py encrypt message passphrase
 
@@ -18,6 +20,8 @@ positional arguments:
     message     message to encrypt (must be alphabetical)
     passphrase  passphrase to use (must be emojis)
 ```
+
+### Decrypt
 
 ```
 cryptomoji.py decrypt message passphrase
@@ -50,6 +54,11 @@ the passphrase is shorter than the message, the passphrase gets repeated to matc
 ```bash
 pip install -r requirements.txt
 ```
+
+## Bugs
+
+- Having issues displaying the new style emojis with gender and Fitzpatrick modfiers such as 👩🏻‍🎓. I think this may be an issue with
+the terminal's handling of emoji, rather than a bug in my code.
 
 ## Disclaimer
 
