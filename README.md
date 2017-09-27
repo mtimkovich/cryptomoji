@@ -1,6 +1,6 @@
 # Cryptomoji
 
-*Encrypt your messages into emoji!*
+*Encrypt your messages as emoji!*
 
 🔬🙆 ‍ ♂ ️🕵 🏼 ‍ ♀ ️🌕🥑🐅🤾 🏽 ‍ ♀ ️🍸🚈👱 🏿 ‍ ♀ ️👲 🏼👨 🏿 ‍ ⚖ ️
 
