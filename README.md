@@ -2,6 +2,8 @@
 
 *Encrypt your messages into emoji!*
 
+🔬🙆 ‍ ♂ ️🕵 🏼 ‍ ♀ ️🌕🥑🐅🤾 🏽 ‍ ♀ ️🍸🚈👱 🏿 ‍ ♀ ️👲 🏼👨 🏿 ‍ ⚖ ️
+
 ## Usage
 
 Cryptomoji encrypts alphabetical messages into emoji using an emoji passphrase, and can decrypt the message when given

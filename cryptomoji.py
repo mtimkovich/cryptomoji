@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import argparse
 import emoji
 import itertools
@@ -45,6 +45,11 @@ def encrypt_char(c, p):
     return z
 
 
+def emoji_split(text):
+    demoji = emoji.demojize(text)
+    return [':{}:'.format(e) for e in demoji.split(':') if e]
+
+
 def encrypt(cleartext, passphrase):
     """
     cleartext (letters) - phrase to be encrypted
@@ -55,13 +60,11 @@ def encrypt(cleartext, passphrase):
 
     cypher = ''
 
-    for c, p in zip(cleartext, itertools.cycle(passphrase)):
+    for c, p in zip(cleartext, itertools.cycle(emoji_split(passphrase))):
         letter = ord(c) - 97
-        emoji = emoji_ord(p)
+        emoji_val = emoji_ord(emoji.emojize(p))
 
-        print(letter, emoji)
-
-        cyphermoji = encrypt_char(letter, emoji)
+        cyphermoji = encrypt_char(letter, emoji_val)
         cypher += ord_emoji(cyphermoji)[1]
 
     return cypher
@@ -77,14 +80,9 @@ def decrypt(cypher, passphrase):
 
     output = ''
 
-    demoji = emoji.demojize(cypher)
-    cypher_emojis = [':{}:'.format(e) for e in demoji.split(':') if e]
-
-    for c, p in zip(cypher_emojis, itertools.cycle(passphrase)):
+    for c, p in zip(emoji_split(cypher), itertools.cycle(passphrase)):
         cyphermoji = emoji_ord(emoji.emojize(c))
         passmoji = emoji_ord(p)
-
-        print(cyphermoji, passmoji)
 
         clear_char = decrypt_char(cyphermoji, passmoji)
         output += chr(clear_char + 97)
@@ -94,10 +92,10 @@ def decrypt(cypher, passphrase):
 
 # parser = argparse.ArgumentParser(description='Encrypt into emojis')
 
-cypher = encrypt('hello', '🤔')
-print(cypher)
+# cypher = encrypt('hello', '🤔')
+# print(cypher)
 
-print()
+# print()
 
-clear = decrypt(cypher, '🤔')
-print(clear)
+# clear = decrypt(cypher, '🤔')
+# print(clear)
