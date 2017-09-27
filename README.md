@@ -34,7 +34,7 @@ I highly recommend using quotes around your emoji sentences because as you might
 ## Implementation
 
 Cryptomoji uses a modified [Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher) that has been adjusted
-to convert emoji to ASCII letters and vice versa.
+to convert emoji to letters and vice versa.
 
 |    | 🥇 | 🥈 | 🥉 |
 |:--:|:--:|:--:|----|
