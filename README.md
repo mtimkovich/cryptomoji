@@ -33,7 +33,7 @@ I highly recommend using quotes around your emoji sentences because as you might
 
 ## Implementation
 
-cryptomoji uses a modified [Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher) that has been adjusted to work
+Cryptomoji uses a modified [Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher) that has been adjusted
 to convert emoji to ASCII letters and vice versa.
 
 |    | 🥇 | 🥈 | 🥉 |
@@ -42,8 +42,8 @@ to convert emoji to ASCII letters and vice versa.
 | 🥈 |  B |  C |  D |
 | 🥉 |  C |  D |  E |
 
-This is a sample of the Vigenère table that cryptomoji uses. The columns represent the cyphertext, while the rows represent the passphrase. If
-the passphrase isn't as long as the string, the passphrase gets repeated to match the length of the plaintext.
+This is a sample of the Vigenère table that Cryptomoji uses. The columns represent the cyphertext, while the rows represent the passphrase. If
+the passphrase is shorter than the message, the passphrase gets repeated to match the length of the message.
 
 ## Installation
 
