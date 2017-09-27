@@ -45,6 +45,7 @@ def encrypt_char(c, p):
 
         n += 1
 
+    # One letter can map to multiple emoji, pick one at random
     return 26 * random.randint(lo, hi) + c - p
 
 
@@ -67,7 +68,12 @@ def encrypt(cleartext, passphrase):
         letter = ord(c) - 97
         emoji_val = emoji_ord(p)
 
-        cyphermoji = encrypt_char(letter, emoji_val)
+        try:
+            cyphermoji = encrypt_char(letter, emoji_val)
+        except TypeError:
+            print('Invalid passphrase')
+            sys.exit(1)
+
         cypher += ord_emoji(cyphermoji)[1]
 
     return cypher
@@ -88,7 +94,12 @@ def decrypt(cypher, passphrase):
         cyphermoji = emoji_ord(c)
         passmoji = emoji_ord(p)
 
-        clear_char = decrypt_char(cyphermoji, passmoji)
+        try:
+            clear_char = decrypt_char(cyphermoji, passmoji)
+        except TypeError:
+            print('Invalid message or passphrase')
+            sys.exit(1)
+
         output += chr(clear_char + 97)
 
     return output
