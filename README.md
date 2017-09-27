@@ -2,7 +2,7 @@
 
 *Encrypt your messages as emoji!*
 
-🔬🙆 ‍ ♂ ️🕵 🏼 ‍ ♀ ️🌕🥑🐅🤾 🏽 ‍ ♀ ️🍸🚈👱 🏿 ‍ ♀ ️👲 🏼👨 🏿 ‍ ⚖ ️
+🐶⛏👩🏼‍⚖️🏇🏿⛎👋🏻🇲🇱🔟🖼🚼💁🏾‍♀️👳🏾
 
 ## Usage
 
@@ -54,11 +54,6 @@ the passphrase is shorter than the message, the passphrase gets repeated to matc
 ```bash
 pip install -r requirements.txt
 ```
-
-## Bugs
-
-- Having issues displaying the new style emojis with gender and Fitzpatrick modfiers such as 👩🏻‍🎓. I think this may be an issue with
-the terminal's handling of emoji, rather than a bug in my code.
 
 ## Disclaimer
 

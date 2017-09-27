@@ -50,6 +50,7 @@ def encrypt_char(c, p):
 
 
 def emoji_split(text):
+    """ split the string into a list of emojis """
     demoji = emoji.demojize(text)
     return [emoji.emojize(':{}:'.format(e)) for e in demoji.split(':') if e]
 
@@ -74,7 +75,8 @@ def encrypt(cleartext, passphrase):
             print('Invalid passphrase')
             sys.exit(1)
 
-        cypher += ord_emoji(cyphermoji)[1]
+        e = ord_emoji(cyphermoji)[1]
+        cypher += e
 
     return cypher
 
@@ -91,6 +93,7 @@ def decrypt(cypher, passphrase):
 
     for c, p in zip(emoji_split(cypher),
                     itertools.cycle(emoji_split(passphrase))):
+
         cyphermoji = emoji_ord(c)
         passmoji = emoji_ord(p)
 
