@@ -10,16 +10,17 @@ Cryptomoji encrypts alphabetical messages into emoji using an emoji passphrase, 
 the correct passphrase.
 
 ```
-cryptomoji.py encrypt
+cryptomoji.py encrypt message passphrase
 
 encrypt message
 
 positional arguments:
     message     message to encrypt (must be alphabetical)
     passphrase  passphrase to use (must be emojis)
+```
 
-
-cryptomoji.py decrypt
+```
+cryptomoji.py decrypt message passphrase
 
 decrypt message
 
@@ -28,7 +29,7 @@ positional arguments:
     passphrase  passphrase to use (must be emojis)
 ```
 
-*Highly* recommend using quotes around your emoji sentences. As you might expect, the command line doesn't handle emojis great.
+I highly recommend using quotes around your emoji sentences because as you might expect, the command line doesn't handle emojis very well.
 
 ## Implementation
 
